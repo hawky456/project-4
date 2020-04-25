@@ -1,0 +1,92 @@
+.container{
+	.g__row{
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 2.5rem;
+		align-items: center;
+		.g{
+			&__col-12.gr__colors{
+				@include grid--gr__colors($color-col-12);
+			}
+			&__col-8.gr__colors{
+				@include grid--gr__colors($color-col-8);
+			}
+			&__col-7.gr__colors{
+				@include grid--gr__colors($color-col-7);
+			}
+			&__col-6.gr__colors{
+				@include grid--gr__colors($color-col-6);
+			}
+			&__col-5.gr__colors{
+				@include grid--gr__colors($color-col-5);
+			}
+			&__col-4.gr__colors{
+				@include grid--gr__colors($color-col-4);
+			}
+			&__col-3.gr__colors {
+				@include grid--gr__colors($color-col-3);
+			}
+		}
+	}
+}
+
+.g{
+	&__col-3,
+	&__col-4,
+	&__col-5,
+	&__col-6,
+	&__col-7,
+	&__col-8,
+	&__col-9,
+	&__col-12 {
+		width: 100%;
+	}
+}
+
+
+
+@include desktop_view {
+	.g{
+		&__row{
+			@include flex-row(nowrap !important);
+			&>* {
+				margin: 0 0.45rem;
+			}
+		}
+		&__col-12{
+			width: calc-percent(12);
+			@include flex-row(nowrap);
+			&>*{
+				margin: 0 1rem;
+			}
+		}
+		&__col-3{
+			width: calc-percent(3);
+		}
+		&__col-4{
+			width: calc-percent(4);
+		}
+
+		&__col-5{
+			width: calc-percent(5);
+		}
+		&__col-6{
+			width: calc-percent(6);
+		}
+		&__col-7{
+			width: calc-percent(7);
+		}
+		&__col-8{
+			width: calc-percent(8);
+		}
+
+		&__col-9{
+			width: calc-percent(9);
+		}
+
+
+	}
+	.card {
+		padding: 0 2rem;
+	}
+}

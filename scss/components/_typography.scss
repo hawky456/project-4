@@ -1,0 +1,35 @@
+body {
+	font-family: $font-nunito;
+}
+
+
+
+
+.link {
+	color: $primary-color;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.blockquote {
+	border-left: solid 10px $primary-color;
+    border-radius: 7px 0 0 7px;
+    font-style: italic;
+    font-size: 1.40rem;
+	padding-left: 1rem;
+    margin: 2rem 1rem;
+    color: $text-color;
+}
+
+.headline{
+	&--1 {
+		color: $primary-color;
+		font-weight: bold;
+		padding-left: 1rem;
+	}
+	&--2 {
+		font-weight: 100;
+		color: $gray-light;
+	}
+}

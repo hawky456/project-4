@@ -1,0 +1,29 @@
+.nav {
+	margin: 0;
+	padding: 0;
+	@include desktop_view {
+		@include flex-row(wrap);
+	}
+	&__list{
+		text-align: center;
+		border-radius: 7px;
+		padding: 0.8rem 0;
+		margin: 0.8rem 0;
+		@include desktop_view {
+			padding: 0.7rem;
+		}
+		&:hover{
+			background: $primary-color;
+			cursor: pointer;
+			&>*{
+				color: $white;
+			}
+		}
+		a {
+			color: #444;
+			text-decoration: none;
+			font-weight: 500;
+		}
+
+	}
+}
